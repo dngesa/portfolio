@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leadership and community | Deogyne Ngesa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;800&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #12312f;
+    --gold: #f5b000;
+    --mist: #e8f0f2;
+    --card: #ffffff;
+    --ink: #12312f;
+    --line: #d5e0e3;
+    --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--mist); color: var(--ink); font-family: var(--serif); line-height: 1.7; }
+
+  .site-header { background: var(--green); }
+  .nav { max-width: 1100px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; justify-content: space-between; }
+  .brand { font-family: var(--sans); font-weight: 800; font-size: 1.15rem; color: var(--gold); text-decoration: none; }
+  .nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 26px; margin: 0; padding: 0; }
+  .nav a.link { font-family: var(--sans); font-weight: 600; color: var(--mist); text-decoration: none; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+  .nav a.link:hover { border-bottom-color: rgba(245,176,0,.6); }
+  .nav a.link[aria-current="page"] { border-bottom-color: var(--gold); }
+
+  .hero { background: var(--green); padding: 24px 24px 56px; }
+  .hero-inner { max-width: 1100px; margin: 0 auto; }
+  .hero h1 { font-family: var(--sans); font-weight: 800; font-size: clamp(2.4rem, 7vw, 4.5rem); line-height: 1.02; letter-spacing: -0.02em; color: var(--mist); margin: 0 0 16px; }
+  .hero p { font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--mist); margin: 0; max-width: 34em; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 36px 24px 64px; }
+  .group { margin-bottom: 48px; }
+  .group > h2 { font-family: var(--sans); font-weight: 800; font-size: 1.6rem; margin: 0 0 18px; }
+  .cards { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--gold); padding: 24px 28px; }
+  .card h3 { font-family: var(--sans); font-weight: 800; font-size: 1.25rem; margin: 0 0 2px; }
+  .meta { font-family: var(--sans); font-weight: 500; font-size: .9rem; margin: 0 0 14px; opacity: .75; }
+  .card p { margin: 0 0 12px; }
+  .card ul { margin: 0; padding-left: 22px; }
+  .stat { font-family: var(--sans); font-weight: 800; font-size: 2rem; line-height: 1.1; margin: 0; }
+  .stat-label { font-family: var(--sans); font-size: .9rem; margin: 0 0 14px; opacity: .75; }
+
+  .photo-slot { display: grid; place-items: center; min-height: 180px; margin-bottom: 16px; background: var(--mist); border: 2px dashed #9bb0b3; font-family: var(--sans); font-size: .9rem; text-align: center; padding: 12px; }
+  .card img { display: block; width: 100%; height: auto; margin-bottom: 16px; }
+
+  .award { background: var(--green); color: var(--mist); border-left-color: var(--gold); }
+  .award .meta { color: var(--mist); }
+
+  .note { max-width: 760px; font-size: .95rem; }
+
+  @media (max-width: 600px) { .card { padding: 20px; } .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="index.html">Deogyne Ngesa</a>
+    <ul>
+      <li><a class="link" href="index.html">Home</a></li>
+      <li><a class="link" href="about.html">About</a></li>
+      <li><a class="link" href="projects.html">Projects</a></li>
+      <li><a class="link" href="business.html">Business and communication</a></li>
+      <li><a class="link" href="responsible-ai.html">Responsible AI</a></li>
+      <li><a class="link" href="leadership.html" aria-current="page">Leadership and community</a></li>
+      <li><a class="link" href="reflection.html">Reflection and goals</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Leadership and community</h1>
+    <p>Beyond the classroom, I believe in taking initiative, representing others, sharing knowledge and contributing to my community.</p>
+  </div>
+</section>
+
+<main>
+
+  <section class="group" aria-labelledby="awards-h">
+    <h2 id="awards-h">Awards and recognition</h2>
+    <div class="cards">
+      <article class="card award">
+        <h3>Shine Award</h3>
+        <p class="meta">EDIT: Organization that gave the Shine Award &middot; Month Year</p>
+        <p>EDIT: One or two sentences on what the award recognized and what you did to earn it.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="lead-h">
+    <h2 id="lead-h">Student leadership and advocacy</h2>
+    <div class="cards">
+
+      <article class="card">
+        <h3>Board Director, ASEC</h3>
+        <p class="meta">Alberta Students' Executive Council &middot; September 2026 to present</p>
+        <div class="photo-slot">Add a photo: replace this box with &lt;img src="images/asec.jpg" alt="Describe the photo"&gt;</div>
+        <p class="stat">133,000+</p>
+        <p class="stat-label">Post-secondary students represented across Alberta</p>
+        <p>As a Board Director, I contribute to board-level governance, decision-making and provincial advocacy, helping advance the interests of post-secondary students across Alberta.</p>
+      </article>
+
+      <article class="card">
+        <h3>Student Councillor, SANQC</h3>
+        <p class="meta">Students' Association of NorQuest College &middot; 2026 to present</p>
+        <div class="photo-slot">Add a photo: replace this box with &lt;img src="images/sanqc.jpg" alt="Describe the photo"&gt;</div>
+        <p>As a Student Councillor, I bring forward student perspectives and contribute to discussions about student experiences and post-secondary education.</p>
+        <ul>
+          <li>Academic Council member</li>
+          <li>Signing authority</li>
+          <li>Financial oversight responsibilities</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="group" aria-labelledby="stem-h">
+    <h2 id="stem-h">STEM education and community involvement</h2>
+    <div class="cards">
+
+      <article class="card">
+        <h3>STEM Instructor, Black Boys Code</h3>
+        <p class="meta">Volunteer &middot; Ages 8 to 17</p>
+        <div class="photo-slot">Add a photo: replace this box with &lt;img src="images/bbc.jpg" alt="Describe the photo"&gt;</div>
+        <p>Supporting young learners as they explore coding, robotics and STEM through hands-on learning activities.</p>
+      </article>
+
+      <article class="card">
+        <h3>STEM Instructor, AADFC</h3>
+        <p class="meta">EDIT: AADFC full name &middot; Volunteer &middot; Dates</p>
+        <div class="photo-slot">Add a photo: replace this box with &lt;img src="images/aadfc.jpg" alt="Describe the photo"&gt;</div>
+        <p>EDIT: One or two sentences on what you teach and who the learners are.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <p class="note">Photos of children or other people: only publish them if you have permission from the people in them, or from a parent or guardian for minors.</p>
+
+</main>
+</body>
+</html>
