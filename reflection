@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflection and goals | Deogyne Ngesa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;800&family=Source+Serif+4:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #12312f;
+    --gold: #f5b000;
+    --mist: #e8f0f2;
+    --card: #ffffff;
+    --ink: #12312f;
+    --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--mist); color: var(--ink); font-family: var(--serif); line-height: 1.7; }
+
+  /* Header + nav */
+  .site-header { background: var(--green); }
+  .nav { max-width: 1100px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; justify-content: space-between; }
+  .brand { font-family: var(--sans); font-weight: 800; font-size: 1.15rem; color: var(--gold); text-decoration: none; }
+  .nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 26px; margin: 0; padding: 0; }
+  .nav a.link { font-family: var(--sans); font-weight: 600; color: var(--mist); text-decoration: none; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+  .nav a.link:hover { border-bottom-color: rgba(245,176,0,.6); }
+  .nav a.link[aria-current="page"] { border-bottom-color: var(--gold); }
+
+  /* Hero band */
+  .hero { background: var(--green); padding: 24px 24px 56px; }
+  .hero-inner { max-width: 1100px; margin: 0 auto; }
+  .hero h1 { font-family: var(--sans); font-weight: 800; font-size: clamp(2.4rem, 7vw, 4.5rem); line-height: 1.02; letter-spacing: -0.02em; color: var(--mist); margin: 0 0 16px; }
+  .hero p { font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--mist); margin: 0; max-width: 34em; }
+
+  /* Content */
+  main { max-width: 1100px; margin: 0 auto; padding: 36px 24px 64px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+  .tab {
+    font-family: var(--sans); font-weight: 600; font-size: 1rem;
+    padding: 12px 24px; border-radius: 999px;
+    border: 2px solid var(--green); background: transparent; color: var(--green);
+    cursor: pointer; transition: background .2s, color .2s;
+  }
+  .tab:hover { background: rgba(18,49,47,.08); }
+  .tab[aria-selected="true"] { background: var(--green); color: var(--mist); }
+  .tab:focus-visible, .acc-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+  .panel[hidden] { display: none; }
+  .card { background: var(--card); border: 1px solid #d5e0e3; border-left: 6px solid var(--gold); padding: 28px 32px; max-width: 760px; }
+  .card h2 { font-family: var(--sans); font-weight: 800; font-size: 1.5rem; margin: 0 0 10px; }
+  .card > p { margin: 0 0 16px; font-size: 1.1rem; }
+  ul.next { padding-left: 22px; margin: 0; font-size: 1.1rem; }
+  ul.next li { margin-bottom: 8px; }
+
+  /* Accordion */
+  .acc-item { border-top: 1px solid #d5e0e3; }
+  .acc-btn { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 16px 2px; background: none; border: 0; color: var(--ink); font-family: var(--sans); font-weight: 600; font-size: 1.1rem; text-align: left; cursor: pointer; }
+  .acc-btn .chev { color: var(--gold); transition: transform .2s; }
+  .acc-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+  .acc-body { padding: 0 2px 18px; }
+  .acc-body[hidden] { display: none; }
+  .acc-body h3 { font-family: var(--sans); font-weight: 600; font-size: .95rem; margin: 14px 0 2px; }
+  .acc-body p { margin: 0; }
+
+  .ai-note { max-width: 760px; margin-top: 28px; font-size: .95rem; }
+
+  @media (max-width: 600px) { .card { padding: 22px 20px; } }
+  @media (prefers-reduced-motion: reduce) { .tab, .acc-btn .chev { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="index.html">Deogyne Ngesa</a>
+    <ul>
+      <li><a class="link" href="index.html">Home</a></li>
+      <li><a class="link" href="about.html">About</a></li>
+      <li><a class="link" href="projects.html">Projects</a></li>
+      <li><a class="link" href="business.html">Business and communication</a></li>
+      <li><a class="link" href="responsible-ai.html">Responsible AI</a></li>
+      <li><a class="link" href="reflection.html" aria-current="page">Reflection and goals</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Reflection and goals</h1>
+    <p>Looking back on my growth and looking ahead to what's possible.</p>
+  </div>
+</section>
+
+<main>
+  <div class="tabs" role="tablist" aria-label="Reflection sections">
+    <button class="tab" role="tab" id="tab-lessons" aria-controls="panel-lessons" aria-selected="true">Lessons Learned</button>
+    <button class="tab" role="tab" id="tab-next" aria-controls="panel-next" aria-selected="false" tabindex="-1">What's Next</button>
+  </div>
+
+  <!-- LESSONS LEARNED -->
+  <section class="panel card" id="panel-lessons" role="tabpanel" aria-labelledby="tab-lessons">
+    <h2>Lessons Learned</h2>
+    <p>Select a project to see what I did, what I learned, and what I would change.</p>
+
+    <!-- Copy this whole acc-item block for each project -->
+    <div class="acc-item">
+      <button class="acc-btn" aria-expanded="false" aria-controls="acc-1">
+        Project name 1 <span class="chev" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="acc-body" id="acc-1" hidden>
+        <h3>What I did</h3>
+        <p>EDIT: Describe your own contribution in one or two sentences.</p>
+        <h3>What I learned</h3>
+        <p>EDIT: One specific lesson, technical or otherwise.</p>
+        <h3>What I would improve</h3>
+        <p>EDIT: One concrete change you'd make next time.</p>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <button class="acc-btn" aria-expanded="false" aria-controls="acc-2">
+        Project name 2 <span class="chev" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="acc-body" id="acc-2" hidden>
+        <h3>What I did</h3>
+        <p>EDIT</p>
+        <h3>What I learned</h3>
+        <p>EDIT</p>
+        <h3>What I would improve</h3>
+        <p>EDIT</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S NEXT -->
+  <section class="panel card" id="panel-next" role="tabpanel" aria-labelledby="tab-next" hidden>
+    <h2>What's Next</h2>
+    <p>Looking ahead at the skills I want to develop and the career I'm working towards.</p>
+    <ul class="next">
+      <li>Strengthening my Python, SQL and machine learning skills</li>
+      <li>Gaining industry experience through a co-op</li>
+      <li>Exploring responsible AI and explainable machine learning</li>
+      <li>Working towards becoming a data scientist</li>
+    </ul>
+  </section>
+
+  <!-- Optional: move to your footer if you prefer -->
+  <p class="ai-note">EDIT: A short, honest note on how you used generative AI to build this portfolio and how you checked the results.</p>
+</main>
+
+<script>
+  // Tabs (click + arrow keys)
+  const tabs = Array.from(document.querySelectorAll('.tab'));
+  function selectTab(tab) {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      selectTab(next);
+      next.focus();
+    });
+  });
+
+  // Accordion
+  document.querySelectorAll('.acc-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !open);
+      document.getElementById(btn.getAttribute('aria-controls')).hidden = open;
+    });
+  });
+</script>
+</body>
+</html>
