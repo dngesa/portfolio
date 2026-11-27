@@ -9,6 +9,7 @@
 <body>
 
 <nav>
+  <a class="brand" href="index.html">Deogyne Ngesa</a>
   <a href="index.html">Home</a>
   <a href="about.html" aria-current="page">About</a>
   <a href="projects.html">Projects</a>
@@ -17,27 +18,46 @@
   <a href="reflection.html">Reflection and goals</a>
 </nav>
 
-<main>
+<header class="band">
   <div class="hero">
-    <img src="images/DP.png" alt="Portrait of Deogyne Ngesa" onerror="this.style.display='none'">
-    <div>
+    <div class="hero-text">
       <h1>Hi, I'm Deogyne</h1>
       <p class="tagline">Machine Learning Analyst Student | Student Councillor, SANQC | Board Director, ASEC | Community Advocate</p>
     </div>
+    <img src="images/DP.png" alt="Portrait of Deogyne Ngesa" onerror="this.style.display='none'">
   </div>
+</header>
 
-  <section>
-    <p>I'm driven by curiosity, continuous learning and the opportunity to use data, AI and technology to make a meaningful impact. My goal is to become a data scientist and use data and AI to solve real-world problems. I believe in challenging myself, stepping outside my comfort zone and achieving what I set my mind to.</p>
+<main>
+  <section class="tabs" aria-label="Strengths, problems I want to solve, and career interests">
+    <div class="tablist" role="tablist">
+      <button role="tab" id="tab-strengths" aria-controls="panel-strengths" aria-selected="true">Strengths</button>
+      <button role="tab" id="tab-problems" aria-controls="panel-problems" aria-selected="false">Problems I Want to Solve</button>
+      <button role="tab" id="tab-career" aria-controls="panel-career" aria-selected="false">Career Interests</button>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-strengths" aria-labelledby="tab-strengths">
+      <p>I bring a combination of analytical thinking, curiosity, adaptability, communication and a willingness to learn. My experiences in healthcare, technology, teaching and student leadership have strengthened my ability to approach challenges from different perspectives, work collaboratively and take initiative. I am also able to break down complex tasks in a way anyone can understand.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-problems" aria-labelledby="tab-problems">
+      <p>I'm interested in using data and machine learning to solve practical problems that organizations and communities face. This includes identifying patterns and trends, understanding what drives outcomes, improving processes, supporting better decision-making and developing predictive solutions that help anticipate future challenges. I'm particularly interested in projects where data can turn complex problems into actionable insights.</p>
+    </div>
+    <div class="panel" role="tabpanel" id="panel-career" aria-labelledby="tab-career">
+      <p>I'm interested in opportunities as a Data Analyst or Machine Learning Analyst, where I can apply my analytical and technical skills to real-world challenges, continue developing my experience and contribute to meaningful projects. My long-term goal is to grow into a Data Scientist, combining data analysis, machine learning and AI to develop impactful solutions.</p>
+    </div>
+  </section>
 
-    <p>I'm a second-year Machine Learning Analyst Diploma student at NorQuest College, building my skills in data analytics, machine learning and AI. I enjoy exploring data, identifying patterns and turning information into insights that can support better decisions. Through academic and work-integrated learning projects, I've worked with datasets containing over 243,000 Go Auto service appointments and environmental data for Environment and Climate Change Canada (ECCC).</p>
+  <section class="story">
+    <p>I am driven by curiosity, continuous learning and the opportunity to use data, AI and technology to make a meaningful impact. My goal is to become a data scientist and use data and AI to solve real-world problems. I believe in challenging myself and achieving what I set my mind to.</p>
 
-    <p>My journey into technology has not been a straight line. My previous experience as a Health Care Aide, including working in rural Alberta hospitals, taught me adaptability, empathy, communication and how to remain calm under pressure. These experiences shaped how I approach challenges and strengthened my appreciation for understanding people's needs.</p>
+    <p>I am a second-year Machine Learning Analyst Diploma student at NorQuest College, building a foundation in data analytics, machine learning and AI. Through academic projects, I have developed skills in Python, SQL, data analysis, machine learning and data visualization. I enjoy exploring data, identifying patterns and turning information into insights. My projects include analyzing over 243,000 Go Auto service appointments and working with environmental data for Environment and Climate Change Canada (ECCC). I am working towards the IBM Data Analyst Professional Certificate.</p>
 
-    <p>Beyond technology, I have actively sought opportunities to grow through leadership and community involvement. I serve as a Student Councillor with the Students' Association of NorQuest College (SANQC) and a Board Director with the Alberta Students' Executive Council (ASEC). These roles have challenged me to take responsibility, consider different perspectives and contribute to conversations that affect post-secondary students.</p>
+    <p>Beyond technology, I have made a conscious effort to step outside my comfort zone and grow through leadership and governance. I serve as a Student Councillor with the Students' Association of NorQuest College (SANQC), where I hold signing authority and sit on the Academic Council. I am also a Board Member of the Alberta Students' Executive Council (ASEC), contributing to the representation and advocacy of 133,000 post-secondary students across Alberta. These roles challenge me to learn, take responsibility, consider different perspectives and grow.</p>
 
-    <p>I'm also passionate about technology education and creating opportunities for young learners. Through volunteering with Black Boys Code and the Africans &amp; African Descendants Friendship Club of St. Albert (AADFC), I've introduced children to coding, robotics, Python and artificial intelligence. I enjoy seeing their curiosity grow, their confidence develop and their excitement when they understand something new.</p>
+    <p>I am passionate about technology education and community involvement. As a STEM Instructor with Black Boys Code, I support children aged 8 - 17 in coding, robotics and STEM. I also volunteered with the Africans &amp; African Descendants Friendship Club of St. Albert (AADFC), planning and delivering introductory AI and Python lessons for children aged 6 - 12. It is rewarding to watch their curiosity grow, see their persistence and share their excitement when they grasp new concepts.</p>
 
-    <p>I look forward to continuing to learn, collaborate and contribute to meaningful work at the intersection of data, technology and society.</p>
+    <p>My experience as a Health Care Aide has shaped me into an empathetic and adaptable professional. Working in rural Alberta hospitals, including Hanna, Smoky Lake and Drayton Valley, often in understaffed environments, taught me to adapt quickly, remain calm under pressure and work collaboratively. It strengthened my communication and problem-solving skills and taught me to understand individual needs and act with compassion.</p>
+
+    <p>I look forward to learning, collaborating and contributing to meaningful work at the intersection of data, technology and society.</p>
   </section>
 
   <section class="next">
@@ -46,6 +66,31 @@
 </main>
 
 <footer>&copy; 2026 Deogyne Ngesa</footer>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.tablist [role="tab"]');
+  var panels = document.querySelectorAll('.tabs [role="tabpanel"]');
+  function show(i) {
+    tabs.forEach(function (t, j) {
+      var on = i === j;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      panels[j].hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(i); });
+    t.addEventListener('keydown', function (e) {
+      var n = null;
+      if (e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+      if (e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+      if (n !== null) { show(n); tabs[n].focus(); e.preventDefault(); }
+    });
+  });
+  show(0);
+})();
+</script>
 
 </body>
 </html>
